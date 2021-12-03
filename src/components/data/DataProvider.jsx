@@ -13,7 +13,7 @@ export const DataProvider = (props) => {
 
   const getData = (month = _month, day = _day) => {
     const headers = {};
-    const url = `https://cors-anywhere.herokuapp.com/https://apizen.date?api=true&month=${month}&day=${day}`;
+    const url = `https://apizen.date?api=true&month=${month}&day=${day}`;
     return fetch(url, {
       method: 'GET',
       headers,
