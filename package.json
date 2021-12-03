@@ -1,15 +1,26 @@
 {
   "name": "on_this_day_no_ts",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "react": "^17.0.2",
+    "react-calendar": "^3.5.0",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +45,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheoR/nss_seekers_on_this_day_no_ts.git"
+  },
+  "keywords": [],
+  "author": "CheoR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CheoR/nss_seekers_on_this_day_no_ts/issues"
+  },
+  "homepage": ""
 }
