@@ -9,7 +9,11 @@ export const GoButton = () => {
   const handleClick = (e) => {
     e.preventDefault();
     alert(`Button Clicked: \n calling: ${url}`);
-    getData(data.month, data.day);
+    getData(data.month, data.day)
+      .then((_data) => {
+        console.log('data');
+        console.table(_data);
+      });
   };
 
   return <button type="button" onClick={handleClick}>Click</button>;

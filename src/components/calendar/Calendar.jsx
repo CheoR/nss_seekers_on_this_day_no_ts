@@ -15,7 +15,7 @@ export const MyCalendar = () => {
     const day = new Date(_value).getDate();
     const month = new Date(_value).getMonth();
 
-    console.log(day, month);
+    console.log(month, day);
     setData({ month, day });
   };
 

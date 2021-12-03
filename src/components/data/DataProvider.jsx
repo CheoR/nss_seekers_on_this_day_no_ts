@@ -11,8 +11,16 @@ export const DataProvider = (props) => {
     month: _month,
   });
 
-  const getData = (month = _month, day = _day) => fetch(`https://apizen.date?api=true&month=${month}&day=${day}`)
-    .then((res) => res.json());
+  const getData = (month = _month, day = _day) => {
+    const headers = {};
+    const url = `https://cors-anywhere.herokuapp.com/https://apizen.date?api=true&month=${month}&day=${day}`;
+    return fetch(url, {
+      method: 'GET',
+      headers,
+    })
+      .then((res) => res.json())
+      .catch((error) => console.error(`Authorization failed: ${error.message}`));
+  };
 
   return (
     /* eslint-disable-next-line */
