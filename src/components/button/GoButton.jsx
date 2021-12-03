@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-const month = new Date().getMonth();
-const date = new Date().getDate();
+import { DataContext } from '../data/DataProvider';
 
-const url = `https://apizen.date?api=true&month=${month}&day=${date}`;
+export const GoButton = () => {
+  const { data, getData } = useContext(DataContext);
+  const url = `https://apizen.date?api=true&month=${data.month}&day=${data.day}`;
 
-const handleClick = (e) => {
-  e.preventDefault();
-  alert(`Button Clicked: \n calling: ${url}`);
+  const handleClick = (e) => {
+    e.preventDefault();
+    alert(`Button Clicked: \n calling: ${url}`);
+    getData(data.month, data.day);
+  };
+
+  return <button type="button" onClick={handleClick}>Click</button>;
 };
 
-export const GoButton = () => <button type="button" onClick={handleClick}>Click</button>;
+// const month = new Date().getMonth();
+// const date = new Date().getDate();
+
+
+// export const GoButton = () =>  <button type="button" onClick={handleClick}>Click</button>;

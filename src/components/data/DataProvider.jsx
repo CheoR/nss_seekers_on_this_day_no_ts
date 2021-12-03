@@ -3,13 +3,12 @@ import React, { createContext, useState } from 'react';
 const _month = new Date().getMonth();
 const _day = new Date().getDate();
 
-
-const DataContext = createContext();
+export const DataContext = createContext();
 
 export const DataProvider = (props) => {
   const [data, setData] = useState({
-    day: 0,
-    month: 0,
+    day: _day,
+    month: _month,
   });
 
   const getData = (month = _month, day = _day) => fetch(`https://apizen.date?api=true&month=${month}&day=${day}`)
